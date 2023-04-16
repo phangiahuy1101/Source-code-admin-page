@@ -1,35 +1,11 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-<!--<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">-->
-<!--<script src="https://code.jquery.com/jquery-3.5.1.js"></script>-->
-<!--<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>-->
-<!--<script>-->
-<!--$(document).ready(function () {-->
-<!--    $('#example').DataTable();-->
-<!--});-->
-<!--</script>-->
-<div class="container mt-5" id="container" th:fragment="container">
+<div class="container mt-5" id="container" th:fragment="contentInit">
     <div class="row tm-content-row">
         <div class="col-12 tm-block-col">
             <div class="tm-bg-primary-dark tm-block tm-block-products tm-block-h-auto">
-<!--                <div class="row tm-content-row">-->
-<!--                    <div class="col-12 tm-block-col">-->
-<!--                        <div class="tm-bg-primary-dark tm-block tm-block-h-auto">-->
-<!--                            <div class="form-group mb-3">-->
-<!--                                <input-->
-<!--                                        id="myInput"-->
-<!--                                        name="search"-->
-<!--                                        type="text"-->
-<!--                                        onkeyup="myFunction()"-->
-<!--                                        placeholder="Search for names.."-->
-<!--                                        class="form-control text-white bg-dark"-->
-<!--                                />-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
                 <div class="tm-product-table-container">
-                    <table class="table table-hover tm-table-small tm-product-table display" id="example">
+                    <table class="table table-hover tm-table-small tm-product-table" id="post-manage-table">
                         <thead>
                         <tr>
                             <th scope="col">USER NAME</th>

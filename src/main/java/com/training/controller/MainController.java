@@ -1,73 +1,75 @@
 package com.training.controller;
 
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class MainController {
 
-    @GetMapping("/accounts")
-    public String showAccount(Model model) {
-        model.addAttribute("container", "components/container/accounts");
+    @GetMapping("/login")
+    public String login() {
+        return "login_file";
+    }
+
+    @RequestMapping(value = {"/", "/index"})
+    public String getInit(Model model) {
+        model.addAttribute("direction","container/init");
         return "index";
     }
 
-    @GetMapping("/add_product")
-    public String addProduct(Model model) {
-        model.addAttribute("container", "components/container/add_product");
+    @RequestMapping("/products")
+    public String products(Model model) {
+        model.addAttribute("direction","container/products");
         return "index";
     }
 
-    @GetMapping("/create_user_form")
-    public String createUserProduct(Model model) {
-        model.addAttribute("container", "components/container/create_user_form");
+    @RequestMapping("/accounts")
+    public String accounts(Model model) {
+        model.addAttribute("direction","container/accounts");
         return "index";
     }
 
-    @GetMapping("/edit_product")
-    public String editProduct(Model model) {
-        model.addAttribute("container", "components/container/edit_product");
-        return "index";
-    }
-
-    @GetMapping("/index")
-    public String index(Model model) {
-        model.addAttribute("container", "components/container/main");
-        return "index";
-    }
-
-    @GetMapping("/login_file")
-    public String loginFile(Model model) {
-        model.addAttribute("container", "components/container/login_file");
-        return "index";
-    }
-    @GetMapping("/notification-manage")
-    public String notificationManage(Model model) {
-        model.addAttribute("container", "components/container/notification-manage");
-        return "index";
-    }
-    @GetMapping("/order_list_manage")
-    public String orderListManage(Model model) {
-        model.addAttribute("container", "components/container/order_list_manage");
-        return "index";
-    }
-    @GetMapping("/post_manage")
+    @RequestMapping("/post-manage")
     public String postManage(Model model) {
-        model.addAttribute("container", "components/container/post_manage");
-        return "index";
-    }
-    @GetMapping("/product")
-    public String product(Model model) {
-        model.addAttribute("container", "components/container/product");
-        return "index";
-    }
-    @GetMapping("/update_user_form")
-    public String updateUserForm(Model model) {
-        model.addAttribute("container", "components/container/update_user_form");
+        model.addAttribute("direction","container/post-manage");
         return "index";
     }
 
+    @RequestMapping("/order-list-manage")
+    public String orderList(Model model) {
+        model.addAttribute("direction","container/order-list-manage");
+        return "index";
+    }
 
+    @RequestMapping("/notification-manage")
+    public String notification(Model model) {
+        model.addAttribute("direction","container/notification-manage");
+        return "index";
+    }
+
+    @RequestMapping("/create-account")
+    public String createAccount(Model model) {
+        model.addAttribute("direction","container/create-account");
+        return "index";
+    }
+
+    @GetMapping("/update-account")
+    public String updateAccount(Model model) {
+        model.addAttribute("direction", "container/update-account");
+        return "index";
+    }
+
+    @RequestMapping("/add-product")
+    public String addProduct(Model model) {
+        model.addAttribute("direction","container/add-product");
+        return "index";
+    }
+
+    @GetMapping("/edit-product")
+    public String editProduct(Model model) {
+        model.addAttribute("direction", "container/edit-product");
+        return "index";
+    }
 }

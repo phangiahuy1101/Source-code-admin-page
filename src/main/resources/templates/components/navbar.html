@@ -1,8 +1,8 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-<nav class="navbar navbar-expand-xl" th:fragment="header">
+<nav class="navbar navbar-expand-xl" th:fragment="narbar">
     <div class="container h-100">
-        <a class="navbar-brand" th:href="@{index}">
+        <a class="navbar-brand" th:href="@{/index}">
             <h1 class="tm-site-title mb-0">Product Admin</h1>
         </a>
         <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -14,28 +14,28 @@
             <ul class="navbar-nav mx-auto h-100">
 
                 <li class="nav-item">
-                    <a class="nav-link" id="productsList" th:href="@{product}">
+                    <a class="nav-link" id="productsList" th:href="@{/products}">
                         <i class="fas fa-shopping-cart"></i>
                         Products
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" id="accountList" th:href="@{accounts}">
+                    <a class="nav-link" id="accountList" th:href="@{/accounts}">
                         <i class="far fa-user"></i>
                         Accounts
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" id="postManagement" th:href="@{post_manage}">
+                    <a class="nav-link" id="postManagement" th:href="@{/post-manage}">
                         <i class="fas fa-list"></i>
                         Posts Management
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" id="orderList" th:href="@{order_list_manage}">
+                    <a class="nav-link" id="orderList" th:href="@{/order-list-manage}">
                         <i class="fas fa-clipboard-list"></i>
                         Orders List
                     </a>
@@ -46,8 +46,8 @@
                        aria-haspopup="true" aria-expanded="false">
                         <i class="far fa-file-alt"></i>
                         <span>
-                                    Reports <i class="fas fa-angle-down"></i>
-                                </span>
+                            Reports <i class="fas fa-angle-down"></i>
+                        </span>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#">Daily Report</a>
@@ -57,7 +57,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" id="notificationList" th:href="@{notification-manage}">
+                    <a class="nav-link" id="notificationList" th:href="@{/notification-manage}">
                         <i class="fas fa-bell"></i>
                         Notifications
                     </a>
@@ -80,7 +80,7 @@
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link d-block" th:href="@{login_file}">
+                    <a class="nav-link d-block" th:href="@{/login}">
                         Admin, <b>Logout</b>
                     </a>
                 </li>
